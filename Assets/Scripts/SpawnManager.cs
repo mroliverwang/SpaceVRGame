@@ -7,6 +7,7 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject ball;
     private InputDevice targetDevice;
+    public float cooldown;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,16 +19,25 @@ public class SpawnManager : MonoBehaviour
         {
             targetDevice = devices[0];
         }
+
+        cooldown = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool buttondown);
-        if (buttondown)
+        if (buttondown & cooldown <=0 )
         {
             Instantiate(ball, ball.transform.position, ball.transform.rotation);
-
+            cooldown = 2f;
         }
+        if (Input.GetKeyDown(KeyCode.S) & cooldown <= 0)
+        {
+            Instantiate(ball, ball.transform.position, ball.transform.rotation);
+            cooldown = 2f;
+        }
+        cooldown -= 1.5f * Time.deltaTime;
     }
 }
