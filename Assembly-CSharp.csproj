@@ -87,6 +87,7 @@
     <Compile Include="Assets/Oculus/SampleFramework/Core/DebugUI/Scripts/HandedInputSelector.cs" />
     <Compile Include="Assets/Oculus/SampleFramework/Core/DistanceGrab/Scripts/DistanceGrabbable.cs" />
     <Compile Include="Assets/Oculus/SampleFramework/Usage/HandsTrainExample/Scripts/Utils/Pose.cs" />
+    <Compile Include="Assets/AnimatedPlanets/Scripts/DayNightMaterialBehaviour.cs" />
     <Compile Include="Assets/Oculus/SampleFramework/Core/Locomotion/Scripts/TeleportInputHandlerHMD.cs" />
     <Compile Include="Assets/Oculus/SampleFramework/Core/Locomotion/Scripts/TeleportInputHandler.cs" />
     <Compile Include="Assets/Oculus/SampleFramework/Core/DistanceGrab/Scripts/GrabManager.cs" />
@@ -154,6 +155,7 @@
     <Compile Include="Assets/Oculus/SampleFramework/Core/HandsInteraction/Scripts/HandsManager.cs" />
     <Compile Include="Assets/Oculus/SampleFramework/Usage/TouchPro/Scripts/StylusTip/StylusTip.cs" />
     <Compile Include="Assets/Oculus/SampleFramework/Usage/Passthrough/Scripts/SceneSampler.cs" />
+    <Compile Include="Assets/AnimatedPlanets/Scripts/AnimatingMatBehaviour.cs" />
     <Compile Include="Assets/Oculus/SampleFramework/Core/Locomotion/Scripts/TeleportTargetHandlerNode.cs" />
     <Compile Include="Assets/Oculus/SampleFramework/Core/DistanceGrab/Scripts/GrabbableCrosshair.cs" />
     <Compile Include="Assets/Oculus/SampleFramework/Usage/HandsTrainExample/Scripts/TrainLocomotive.cs" />
@@ -193,8 +195,6 @@
     <Compile Include="Assets/Oculus/SampleFramework/Usage/SpatialAnchor/Scripts/AnchorUIManager.cs" />
     <Compile Include="Assets/Oculus/SampleFramework/Usage/Passthrough/Scripts/SelectivePassthroughExperience.cs" />
     <Compile Include="Assets/Oculus/SampleFramework/Usage/HandsTrainExample/Scripts/TrackSegment.cs" />
-    <Compile Include="Assets/AnimatedPlanets/Scripts/DayNightMaterialBehaviour.cs" />
-    <Compile Include="Assets/AnimatedPlanets/Scripts/AnimatingMatBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/AnimatedPlanets/Shaders/PlanetAnimatingClouds.shader" />

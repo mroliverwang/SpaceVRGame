@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{C4F71CCF-0883-D375-0177-C3249BFC8331}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Oculus/VR/Editor/OVRProjectSetup/Tasks/Processors/OVRConfigurationTaskUpdaterSummary.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Oculus/VR/Scripts/OVRPlugin.cs">
     <Files>
       <File FileName="Assets/Oculus/VR/Editor/OVRProjectSetup/Tasks/Processors/OVRConfigurationTaskUpdaterSummary.cs" Line="145" Column="1" />
-      <File FileName="Assets/Oculus/SampleFramework/Editor/OculusSampleFrameworkUtil.cs" Line="47" Column="1" />
-      <File FileName="Assets/Oculus/VR/Scripts/OVRPlugin.cs" Line="57" Column="1" />
+      <File FileName="Assets/Oculus/SampleFramework/Editor/OculusSampleFrameworkUtil.cs" />
+      <File FileName="Assets/Oculus/VR/Scripts/OVRPlugin.cs" Line="522" Column="24" />
+      <File FileName="Assets/AnimatedPlanets/Shaders/Sun.shader" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
