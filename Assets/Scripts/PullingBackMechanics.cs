@@ -8,7 +8,10 @@ public class PullingBackMechanics : MonoBehaviour
     private InputDevice targetDevice;
     private Rigidbody rb;
     public GameObject player;
-
+    private Vector3 newVel;
+    private Vector3 curVel;
+    private float pullingSpeed;
+    private float maxPull;
 
     // Start is called before the first frame update
     void Start()
@@ -19,22 +22,36 @@ public class PullingBackMechanics : MonoBehaviour
 
         if (devices.Count > 0)
         {
+            
             targetDevice = devices[0];
         }
 
         rb = GetComponent<Rigidbody>();
+        newVel = new Vector3();
+        curVel = new Vector3();
+        pullingSpeed = 1.0f;
+        maxPull = 1200f;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        targetDevice.TryGetFeatureValue(CommonUsages.triggerButton, out bool buttondown);
-        if (buttondown)
+        //Debug.Log(targetDevice);
+        targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggervalue);
+        
+        if (triggervalue > 0.1f)
         {
-            rb.velocity = (player.transform.position - transform.position) * 0.5f *Time.deltaTime;
+            //Debug.Log("ssss");
+            if (pullingSpeed < maxPull)
+            {
+                pullingSpeed += 400f * Time.deltaTime;
+            }    
+            curVel = rb.velocity;
+            newVel = (player.transform.position - transform.position).normalized;
+            rb.velocity = (curVel+newVel).normalized * pullingSpeed *Time.deltaTime;
         }
 
 
-        rb.velocity = (player.transform.position - transform.position) * 5f * Time.deltaTime;
+        
     }
 }

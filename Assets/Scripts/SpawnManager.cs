@@ -24,7 +24,7 @@ public class SpawnManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
         targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool buttondown);
@@ -33,11 +33,7 @@ public class SpawnManager : MonoBehaviour
             Instantiate(ball, ball.transform.position, ball.transform.rotation);
             cooldown = 2f;
         }
-        if (Input.GetKeyDown(KeyCode.S) & cooldown <= 0)
-        {
-            Instantiate(ball, ball.transform.position, ball.transform.rotation);
-            cooldown = 2f;
-        }
+        
         cooldown -= 1.5f * Time.deltaTime;
     }
 }
