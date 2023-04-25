@@ -7,9 +7,7 @@ public class PullingBackMechanics : MonoBehaviour
 {
     private InputDevice targetDevice;
     private Rigidbody rb;
-    [SerializeField]
-    private GameObject player;
-
+    public GameObject player;
     private Vector3 newVel;
     private Vector3 curVel;
     private float pullingSpeed;
@@ -18,8 +16,6 @@ public class PullingBackMechanics : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("OVRPlayerController");
-
         List<InputDevice> devices = new List<InputDevice>();
         InputDeviceCharacteristics rightControllerCharacteristics = InputDeviceCharacteristics.Right | InputDeviceCharacteristics.Controller;
         InputDevices.GetDevicesWithCharacteristics(rightControllerCharacteristics, devices);
