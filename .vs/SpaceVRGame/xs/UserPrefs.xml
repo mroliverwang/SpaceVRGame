@@ -1,15 +1,57 @@
 ﻿<Properties StartupConfiguration="{C4F71CCF-0883-D375-0177-C3249BFC8331}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Oculus/VR/Scripts/OVRPlugin.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Oculus/VR/Scripts/Util/OVRGrabbable.cs">
     <Files>
-      <File FileName="Assets/Oculus/VR/Editor/OVRProjectSetup/Tasks/Processors/OVRConfigurationTaskUpdaterSummary.cs" Line="145" Column="1" />
-      <File FileName="Assets/Oculus/SampleFramework/Editor/OculusSampleFrameworkUtil.cs" />
-      <File FileName="Assets/Oculus/VR/Scripts/OVRPlugin.cs" Line="522" Column="24" />
-      <File FileName="Assets/AnimatedPlanets/Shaders/Sun.shader" Line="1" Column="1" />
+      <File FileName="Assets/Oculus/VR/Scripts/Util/OVRGrabbable.cs" Line="135" Column="6" />
+      <File FileName="Assets/Oculus/VR/Scripts/Util/Slot.cs" Line="1" Column="1" />
+      <File FileName="Assets/Oculus/VR/Scripts/Util/Item.cs" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SpaceVRGame" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="AnimatedPlanets" expanded="True">
+                <Node name="Shaders" expanded="True" />
+              </Node>
+              <Node name="Oculus" expanded="True">
+                <Node name="SampleFramework" expanded="True">
+                  <Node name="Editor" expanded="True" />
+                </Node>
+                <Node name="VR" expanded="True">
+                  <Node name="Editor" expanded="True">
+                    <Node name="OVRProjectSetup" expanded="True">
+                      <Node name="Tasks" expanded="True">
+                        <Node name="Processors" expanded="True" />
+                      </Node>
+                    </Node>
+                  </Node>
+                  <Node name="Scripts" expanded="True">
+                    <Node name="Util" expanded="True">
+                      <Node name="OVRGrabbable.cs" selected="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Weapons" expanded="True">
+                <Node name="Inventory" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Unity" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ad02a993-ca34-411d-ba95-015680f75d29" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="218990dc-a158-459f-a260-941ae2d55578" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

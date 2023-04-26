@@ -121,8 +121,19 @@ public class OVRGrabbable : MonoBehaviour
         m_grabbedBy = hand;
         m_grabbedCollider = grabPoint;
         gameObject.GetComponent<Rigidbody>().isKinematic = true;
-    }
 
+        //Added for Inventory________________________________________________________________________________________________
+        if (gameObject.GetComponent<Item>() == null) return;
+        if (gameObject.GetComponent<Item>().inSlot)
+            {
+            gameObject.GetComponentInParent<Slot>().ItemInSlot = null;
+            gameObject.GetComponent<Item>().inSlot = false;
+            gameObject.GetComponent<Item>().currentSlot.ResetColor();
+            gameObject.GetComponent<Item>().currentSlot = null;
+        }
+
+    }
+    //_______________________________________________________________________________________________________________________
 	/// <summary>
 	/// Notifies the object that it has been released.
 	/// </summary>
