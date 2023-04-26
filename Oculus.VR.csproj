@@ -66,6 +66,7 @@
     <Compile Include="Assets/Oculus/VR/Scripts/OVRResources.cs" />
     <Compile Include="Assets/Oculus/VR/Scripts/OVRSpatialAnchor.cs" />
     <Compile Include="Assets/Oculus/VR/Scripts/Util/OVRSkeletonRenderer.cs" />
+    <Compile Include="Assets/Oculus/VR/Scripts/Util/Item.cs" />
     <Compile Include="Assets/Oculus/VR/Scripts/OVRSpaceQuery.cs" />
     <Compile Include="Assets/Oculus/VR/Scripts/Util/OVRFace.cs" />
     <Compile Include="Assets/Oculus/VR/Scripts/Util/OVRRecord.cs" />
@@ -106,6 +107,7 @@
     <Compile Include="Assets/Oculus/VR/Scripts/Util/OVRMixedRealityCaptureConfiguration.cs" />
     <Compile Include="Assets/Oculus/VR/Scripts/MetaXRFeature.cs" />
     <Compile Include="Assets/Oculus/VR/Scripts/Util/OVRPointerEventData.cs" />
+    <Compile Include="Assets/Oculus/VR/Scripts/Util/Slot.cs" />
     <Compile Include="Assets/Oculus/VR/Scripts/OVRBoundary.cs" />
     <Compile Include="Assets/Oculus/VR/Scripts/Util/OVRPlayerController.cs" />
     <Compile Include="Assets/Oculus/VR/Scripts/OVRProfile.cs" />
@@ -163,8 +165,6 @@
     <Compile Include="Assets/Oculus/VR/Scripts/Util/OVRAutoDestroyInMRC.cs" />
     <Compile Include="Assets/Oculus/VR/Scripts/OVRTrackedKeyboard/OVRTrackedKeyboard.cs" />
     <Compile Include="Assets/Oculus/VR/Scripts/OVRKtxTexture.cs" />
-    <Compile Include="Assets/Oculus/VR/Scripts/Util/Item.cs" />
-    <Compile Include="Assets/Oculus/VR/Scripts/Util/Slot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Oculus/VR/Shaders/OVRTrackedKeyboard/Unlit-NormalMMBias.shader" />
