@@ -7,6 +7,9 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject ball;
 
+    public GameObject[] enemyList;
+    public GameObject[] difficultEnemyList;
+    
 
 
 
