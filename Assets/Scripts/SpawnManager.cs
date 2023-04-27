@@ -6,6 +6,11 @@ using UnityEngine.XR;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject ball;
+
+
+
+
+
     private InputDevice targetDevice;
     public float cooldown;
     // Start is called before the first frame update
@@ -26,7 +31,7 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
+        
         targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool buttondown);
         if (Input.GetKeyDown(KeyCode.Tab) & cooldown <=0 )
         {

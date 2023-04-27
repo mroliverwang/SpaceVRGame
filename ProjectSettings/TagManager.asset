@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - SideWall
-  - SamplesInfoPanel
+  - EnergyCore
   layers:
   - Default
   - TransparentFX
@@ -17,7 +17,7 @@ TagManager:
   - player
   - batFollower
   - ball
-  - Hide
+  - enemy
   - 
   - 
   - 

@@ -54,7 +54,10 @@ public class PullingBackMechanics : MonoBehaviour
             newVel = (player.transform.position - transform.position).normalized;
             rb.velocity = (curVel+newVel).normalized * pullingSpeed *Time.deltaTime;
         }
-
+        else
+        {
+            pullingSpeed = 1.0f;
+        }
 
         
     }
