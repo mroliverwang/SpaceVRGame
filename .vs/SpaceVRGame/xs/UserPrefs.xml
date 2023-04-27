@@ -1,69 +1,19 @@
 ﻿<Properties StartupConfiguration="{C4F71CCF-0883-D375-0177-C3249BFC8331}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/UI/MenuController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Oculus/Interaction/Runtime/Shaders/OculusControllerRayShader.shader">
     <Files>
-      <File FileName="Assets/Oculus/VR/Scripts/Util/Slot.cs" Line="1" Column="1" />
+      <File FileName="Assets/Oculus/Interaction/Runtime/Shaders/OculusHand.shader" Line="1" Column="1" />
+      <File FileName="Assets/Oculus/VR/Scripts/Util/Slot.cs" />
       <File FileName="Assets/Oculus/VR/Scripts/Util/Item.cs" />
       <File FileName="Assets/Weapons/Inventory/InventoryVR.cs" />
       <File FileName="Assets/Oculus/VR/Scripts/Util/OVRGrabbable.cs" />
       <File FileName="Assets/Oculus/SampleFramework/Core/DebugUI/Scripts/LaserPointer.cs" />
-      <File FileName="Assets/UI/MenuController.cs" Line="10" Column="35" />
+      <File FileName="Assets/UI/MenuController.cs" />
+      <File FileName="Assets/Oculus/Interaction/Runtime/Shaders/OculusControllerRayShader.shader" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="SpaceVRGame" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="AnimatedPlanets" expanded="True">
-                <Node name="Shaders" expanded="True" />
-              </Node>
-              <Node name="Oculus" expanded="True">
-                <Node name="SampleFramework" expanded="True">
-                  <Node name="Core" expanded="True">
-                    <Node name="DebugUI" expanded="True">
-                      <Node name="Scripts" expanded="True" />
-                    </Node>
-                    <Node name="DistanceGrab" expanded="True">
-                      <Node name="Scripts" expanded="True" />
-                    </Node>
-                  </Node>
-                  <Node name="Editor" expanded="True" />
-                </Node>
-                <Node name="VR" expanded="True">
-                  <Node name="Editor" expanded="True">
-                    <Node name="OVRProjectSetup" expanded="True">
-                      <Node name="Tasks" expanded="True">
-                        <Node name="Processors" expanded="True" />
-                      </Node>
-                    </Node>
-                  </Node>
-                  <Node name="Scripts" expanded="True">
-                    <Node name="Util" expanded="True">
-                      <Node name="Slot.cs" selected="True" />
-                    </Node>
-                  </Node>
-                </Node>
-              </Node>
-              <Node name="UI" expanded="True" />
-              <Node name="Weapons" expanded="True">
-                <Node name="Inventory" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="Unity" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="218990dc-a158-459f-a260-941ae2d55578" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b171620b-5ad6-4145-be0d-ae5c6fd35779" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
