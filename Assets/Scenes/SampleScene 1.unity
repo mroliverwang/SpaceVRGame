@@ -6575,11 +6575,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 192538051512949537, guid: 81a13eafe7391704daeadd07d3b01102, type: 3}
   enemyList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  difficultEnemyList: []
+  - {fileID: 8504490257798804540, guid: 247ed6d26009bf9419b68277a20c9f9c, type: 3}
+  - {fileID: 7547991464129972046, guid: 81eb30c11f0fdde4ab65ced270c22f53, type: 3}
+  - {fileID: 1464548026564147963, guid: f792aca8c6940274391b2defb3a4de44, type: 3}
+  - {fileID: 1541306668495579997, guid: 946512592f4b81b4ea156c236107840a, type: 3}
+  difficultEnemyList:
+  - {fileID: 5055449334494515568, guid: 20a096d5f71a7d24ab13689546cd8e3e, type: 3}
+  - {fileID: 3790240496348309098, guid: e840bba8e544ed54cbc4ac9af0346d61, type: 3}
+  - {fileID: 1464548026564147963, guid: f792aca8c6940274391b2defb3a4de44, type: 3}
+  - {fileID: 1541306668495579997, guid: 946512592f4b81b4ea156c236107840a, type: 3}
+  - {fileID: 7547991464129972046, guid: 81eb30c11f0fdde4ab65ced270c22f53, type: 3}
+  - {fileID: 8504490257798804540, guid: 247ed6d26009bf9419b68277a20c9f9c, type: 3}
+  - {fileID: 2871685104883204588, guid: 91c23aebb1c4b394eb31e7bbc58b629b, type: 3}
+  - {fileID: 1886678053250934407, guid: 2111e12095a55ba40a0412d47f92915f, type: 3}
   cooldown: 0
 --- !u!1 &1062063361
 GameObject:
