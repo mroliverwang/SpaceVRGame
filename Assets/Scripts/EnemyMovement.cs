@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    private Vector3 surfaceNormal;
-    private Vector3 customUp;
-    private Vector3 currentNormal;
-    private Vector3 surfacen;
+  
     private Vector3 currentForward;
     private float gravity = 10f;
     private float lerpSpeed = 10f;
@@ -21,28 +18,71 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     private bool isAttacking;
     private bool isClimbing;
-    
 
-    // Start is called before the first frame update
+
+    private float moveSpeed = 1f;
+
+    private Vector3 offset;
+    
     void Start()
     {
-        surfacen = transform.up;
+        /*surfacen = transform.up;
         currentNormal = transform.up;
-        customUp = transform.up;
+        customUp = transform.up;*/
         currentForward = Vector3.forward;
         GetComponent<Rigidbody>().freezeRotation = true;
         isClimbing = false;
-        isAttacking = false;       
+        isAttacking = false;
+
+        if (gameObject.name.Contains("razor"))
+        {
+            moveSpeed = 1.3f;
+            damage = 1f;
+        }
+        else if (gameObject.name.Contains("shell"))
+        {
+            moveSpeed = 0.4f;
+            damage = 8f;
+        }
+        else if (gameObject.name.Contains("spike"))
+        {
+            moveSpeed = 0.6f;
+            damage = 4f;
+        }
+        else if (gameObject.name.Contains("spider"))
+        {
+            moveSpeed = 1f;
+            damage = 5f;
+        }
+        offset = new Vector3(0.5f, 0, 0);
     }
 
-    // Update is called once per frame
+
+
+    
     void FixedUpdate()
     {
         //Moving
         if (!isAttacking)
         {
-            //GetComponent<Rigidbody>().AddForce(-gravity * GetComponent<Rigidbody>().mass * currentNormal);
-            transform.Translate(currentForward * Time.deltaTime);
+            if (gameObject.name.Contains("razor"))
+            {
+                transform.Translate(currentForward * moveSpeed * Time.deltaTime);
+            }
+            else if (gameObject.name.Contains("shell"))
+            {
+                transform.Translate(currentForward * moveSpeed * Time.deltaTime);
+            }
+            else if (gameObject.name.Contains("spike"))
+            {
+                transform.Translate(currentForward * moveSpeed * Time.deltaTime);
+                transform.Translate(offset * 0.04f*Mathf.Sin(4f*Time.time));
+            }
+            else if (gameObject.name.Contains("spider"))
+            {
+                transform.Translate(currentForward *moveSpeed * Time.deltaTime);
+            }
+            
         }
 
 
@@ -91,18 +131,6 @@ public class EnemyMovement : MonoBehaviour
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
         /*
         Debug.DrawRay(transform.position, -transform.up);
          ray = new Ray(transform.position, -transform.up);
@@ -110,17 +138,14 @@ public class EnemyMovement : MonoBehaviour
          {
              if (!isClimbing)
              {
-
                  currentForward = Quaternion.AngleAxis(-90, currentNormal) * Vector3.Cross(transform.right, currentNormal);
              }
          }
          else
          {
-
              Debug.Log("ssssssss");
              isClimbing = false;
              //transform.up = customUp;
-
          }
              surfacen = hit.normal;
              currentNormal = Vector3.Lerp(currentNormal, surfacen, lerpSpeed * Time.deltaTime);
@@ -129,12 +154,8 @@ public class EnemyMovement : MonoBehaviour
          //currentNormal = Vector3.Lerp(currentNormal, surfacen, lerpSpeed * Time.deltaTime);
          //currentNormal = transform.up;
          //currentForward = transform.forward; Quaternion.AngleAxis(-90, currentNormal) *
-
-
          //currentForward = Quaternion.AngleAxis(-90, currentNormal) * Vector3.Cross(transform.right, currentNormal);
          */
-
-
     }
 
     private void OnTriggerEnter(Collider collision)
