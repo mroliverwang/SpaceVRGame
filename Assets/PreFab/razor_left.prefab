@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 5055449334494515469}
   - component: {fileID: 5055449334494515470}
   - component: {fileID: 5055449334494515471}
+  - component: {fileID: 6709583076588334360}
   m_Layer: 10
   m_Name: razor_left
   m_TagString: Untagged
@@ -141,7 +142,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 1
 --- !u!65 &5055449334494515470
 BoxCollider:
@@ -154,8 +155,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.0309267, z: 1}
-  m_Center: {x: 0, y: 0.6149743, z: 0}
+  m_Size: {x: 1.0719851, y: 1.0309267, z: 1.1534636}
+  m_Center: {x: -0.003121184, y: 0.6149744, z: 0.010200117}
 --- !u!114 &5055449334494515471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,6 +171,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 2
   isAttacking: 0
+--- !u!114 &6709583076588334360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5055449334494515568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83f5f6e579576104b8369a1ca2f197ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5055449334520681773
 GameObject:
   m_ObjectHideFlags: 0

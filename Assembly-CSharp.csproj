@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\PullingBackMechanics.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\PassthroughProjectionSurface.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\HandMeshUI.cs" />
+    <Compile Include="Assets\Scripts\takeDamage.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\Tools\InteractableTool.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\Video\Plugins\Android\NativeVideoPlayer.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\TouchPro\Scripts\Ui\UiAxis1dInspector.cs" />
@@ -103,6 +104,7 @@
     <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\PanelHMDFollower.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\DebugUI\DebugUISample.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\BrushController.cs" />
+    <Compile Include="Assets\Scripts\death.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\Firebase\AnalyticsUI.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\DistanceGrab\Scripts\DistanceGrabberSample.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\TouchPro\Scripts\Ui\UiSceneMenu.cs" />
@@ -527,11 +529,11 @@
     <Reference Include="ReportGeneratorMerged">
       <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.2\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>D:\unity\2021.3.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -1079,9 +1081,9 @@
       <Project>{7B006C8B-488F-35A7-5A59-F9FF6B61A318}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Meta.VoiceSDK.Mic.Other.csproj">
-      <Project>{A54A88DF-A5D8-0669-55F5-63B899E3696D}</Project>
-      <Name>Meta.VoiceSDK.Mic.Other</Name>
+    <ProjectReference Include="Unity.XR.OpenXR.Features.OculusQuestSupport.Editor.csproj">
+      <Project>{3460ECEF-BC9B-03F9-FCC7-69B4FE8713FA}</Project>
+      <Name>Unity.XR.OpenXR.Features.OculusQuestSupport.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.VR.Scripts.Editor.csproj">
       <Project>{A6C19E02-D508-A2F3-F16B-9F9C221623E5}</Project>
@@ -1111,6 +1113,10 @@
       <Project>{81BE676F-6F2A-FB55-6691-8E7015DD78D7}</Project>
       <Name>Unity.XR.Interaction.Toolkit</Name>
     </ProjectReference>
+    <ProjectReference Include="Meta.VoiceSDK.Mic.Other.csproj">
+      <Project>{A54A88DF-A5D8-0669-55F5-63B899E3696D}</Project>
+      <Name>Meta.VoiceSDK.Mic.Other</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.Editor.csproj">
       <Project>{8026C27C-AFBB-67D5-3E8B-700DB0F77675}</Project>
       <Name>Unity.ProBuilder.Editor</Name>
@@ -1122,6 +1128,10 @@
     <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
       <Project>{CB4C5FDE-4692-D144-DCE1-E3D5E364D26D}</Project>
       <Name>Unity.PlasticSCM.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.OpenXR.Features.OculusQuestSupport.csproj">
+      <Project>{31C6A462-E540-FEC9-0F5D-4C40A6C37AC1}</Project>
+      <Name>Unity.XR.OpenXR.Features.OculusQuestSupport</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.csproj">
       <Project>{4A26EACF-DB11-8601-FDD7-A20B336603D8}</Project>
@@ -1171,6 +1181,10 @@
       <Project>{A233696D-5512-13BF-C284-7A7B85161EAF}</Project>
       <Name>Unity.VisualScripting.Shared.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.XR.OpenXR.Editor.csproj">
+      <Project>{01FA05B2-7CD1-832A-4E74-BA65B034796C}</Project>
+      <Name>Unity.XR.OpenXR.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.Environments.csproj">
       <Project>{E2834103-45F7-CB43-AD6D-C066D04B3FE0}</Project>
       <Name>Unity.Services.Core.Environments</Name>
@@ -1207,17 +1221,17 @@
       <Project>{BDEC293B-E4B5-7F20-1230-F14F1E95EA12}</Project>
       <Name>Oculus.LipSync</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Editor.csproj">
-      <Project>{C124F2F2-2644-5E09-6A09-75BAA7CC7FFC}</Project>
-      <Name>Unity.XR.Interaction.Toolkit.Editor</Name>
+    <ProjectReference Include="Unity.XR.OpenXR.csproj">
+      <Project>{9613CB28-541C-FC44-243D-1992EA375A76}</Project>
+      <Name>Unity.XR.OpenXR</Name>
     </ProjectReference>
     <ProjectReference Include="VoiceSDK.Runtime.csproj">
       <Project>{146335E5-901B-28EC-035B-0C2A213567E7}</Project>
       <Name>VoiceSDK.Runtime</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.XR.Oculus.csproj">
-      <Project>{4DFA8106-FC0E-3FDF-BC25-1F8FDECAFAD4}</Project>
-      <Name>Unity.XR.Oculus</Name>
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Editor.csproj">
+      <Project>{C124F2F2-2644-5E09-6A09-75BAA7CC7FFC}</Project>
+      <Name>Unity.XR.Interaction.Toolkit.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Meta.WitAi.Lib.csproj">
       <Project>{74F42D18-B66C-BC58-2126-CA71CD733C00}</Project>
@@ -1230,6 +1244,18 @@
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.csproj">
       <Project>{CA64153F-0C65-32EA-0832-90AF7653C797}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.OpenXR.Features.ConformanceAutomation.csproj">
+      <Project>{5A1E80FA-59AD-4296-AA51-3E60903E77FD}</Project>
+      <Name>Unity.XR.OpenXR.Features.ConformanceAutomation</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.Oculus.csproj">
+      <Project>{4DFA8106-FC0E-3FDF-BC25-1F8FDECAFAD4}</Project>
+      <Name>Unity.XR.Oculus</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.OpenXR.Features.RuntimeDebugger.Editor.csproj">
+      <Project>{05FE93ED-5A14-654C-0766-E3EFE38EF4C5}</Project>
+      <Name>Unity.XR.OpenXR.Features.RuntimeDebugger.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{8FF1CFE9-779D-C948-74ED-7C7BB7F77A79}</Project>

@@ -14,6 +14,8 @@ public class PullingBackMechanics : MonoBehaviour
     private Vector3 curVel;
     private float pullingSpeed;
     private float maxPull;
+    private Vector3 offset;
+    private float maxSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -33,32 +35,38 @@ public class PullingBackMechanics : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         newVel = new Vector3();
         curVel = new Vector3();
-        pullingSpeed = 1.0f;
-        maxPull = 1200f;
+        pullingSpeed = 18.0f;
+        maxPull = 110f;
+        offset = new Vector3(0.1f, -0.1f, -0.9f);
+
+        maxSpeed = 150f;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        //Debug.Log(targetDevice);
+        //Debug.Log(OVRInput.GetConnectedControllers());
+        //OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger)
         targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggervalue);
         
-        if (triggervalue > 0.1f)
+        if (triggervalue > 0.1f || OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger)>0.01f)
         {
-            //Debug.Log("ssss");
+            
             if (pullingSpeed < maxPull)
             {
-                pullingSpeed += 400f * Time.deltaTime;
+                pullingSpeed += 90f * Time.deltaTime;
             }    
             curVel = rb.velocity;
-            newVel = (player.transform.position - transform.position).normalized;
-            rb.velocity = (curVel+newVel).normalized * pullingSpeed *Time.deltaTime;
+            //newVel = ((player.transform.position + offset) +  - transform.position).normalized;
+            //rb.velocity = (curVel+newVel).normalized * pullingSpeed *Time.deltaTime;
+            newVel = ((player.transform.position + offset) + -transform.position);
+            rb.velocity = newVel * pullingSpeed * Time.deltaTime;
         }
         else
         {
-            pullingSpeed = 1.0f;
+            pullingSpeed = 18.0f;
         }
 
-        
+        rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
     }
 }

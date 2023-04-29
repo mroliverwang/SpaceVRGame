@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\PullingBackMechanics.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\PassthroughProjectionSurface.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\HandMeshUI.cs" />
+    <Compile Include="Assets\Scripts\takeDamage.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\Tools\InteractableTool.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\Video\Plugins\Android\NativeVideoPlayer.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\TouchPro\Scripts\Ui\UiAxis1dInspector.cs" />
@@ -103,6 +104,7 @@
     <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\PanelHMDFollower.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\DebugUI\DebugUISample.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\BrushController.cs" />
+    <Compile Include="Assets\Scripts\death.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\Firebase\AnalyticsUI.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\DistanceGrab\Scripts\DistanceGrabberSample.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\TouchPro\Scripts\Ui\UiSceneMenu.cs" />
@@ -479,11 +481,11 @@
     <Reference Include="UnityEngine.XRModule">
       <HintPath>D:\unity\2021.3.16f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.XRModule.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\AOT\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\AOT\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:\unity\2021.3.16f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -921,10 +923,6 @@
       <Project>{9BECB79B-BA45-DC6B-CE28-D6F03336B58E}</Project>
       <Name>Oculus.Interaction.OVR.Samples.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Meta.VoiceSDK.Mic.Other.Player.csproj">
-      <Project>{7762EB35-ED8D-B163-575D-63932A4D342C}</Project>
-      <Name>Meta.VoiceSDK.Mic.Other.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="Oculus.Spatializer.Player.csproj">
       <Project>{E107D9D0-30BE-61C1-B067-EE5CDCD21DD8}</Project>
       <Name>Oculus.Spatializer.Player</Name>
@@ -941,9 +939,17 @@
       <Project>{E192D59A-02C8-BCB1-F0DD-9C96671513D6}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Meta.VoiceSDK.Mic.Other.Player.csproj">
+      <Project>{7762EB35-ED8D-B163-575D-63932A4D342C}</Project>
+      <Name>Meta.VoiceSDK.Mic.Other.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.Player.csproj">
       <Project>{DC92FA27-E6FA-994B-0A81-A04F1CF88FBD}</Project>
       <Name>Unity.VisualScripting.Flow.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.OpenXR.Features.OculusQuestSupport.Player.csproj">
+      <Project>{20ADCD61-FA5B-2F5F-E9AD-61AEDA644A9A}</Project>
+      <Name>Unity.XR.OpenXR.Features.OculusQuestSupport.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.Player.csproj">
       <Project>{84CCF0B9-1E3A-AC0A-1EAA-DDFD25C54B3D}</Project>
@@ -985,17 +991,25 @@
       <Project>{56DD8264-2299-0C55-380F-E7436B915ADA}</Project>
       <Name>Oculus.LipSync.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.XR.OpenXR.Player.csproj">
+      <Project>{F4645B6A-E93F-48C1-E236-D23101AA01E7}</Project>
+      <Name>Unity.XR.OpenXR.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="VoiceSDK.Runtime.Player.csproj">
       <Project>{3ACC8543-A363-7BBF-2A8B-0E2AA78DDEFC}</Project>
       <Name>VoiceSDK.Runtime.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.XR.Oculus.Player.csproj">
-      <Project>{D845D5B8-5D08-DA53-F569-58A356CFDAEB}</Project>
-      <Name>Unity.XR.Oculus.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="Meta.WitAi.Lib.Player.csproj">
       <Project>{74FAAE2D-7D55-1A78-6DDF-5497F1E0B962}</Project>
       <Name>Meta.WitAi.Lib.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.OpenXR.Features.ConformanceAutomation.Player.csproj">
+      <Project>{CEA24B0B-D39A-E86A-B396-0BBEE0DECEBB}</Project>
+      <Name>Unity.XR.OpenXR.Features.ConformanceAutomation.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.Oculus.Player.csproj">
+      <Project>{D845D5B8-5D08-DA53-F569-58A356CFDAEB}</Project>
+      <Name>Unity.XR.Oculus.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
       <Project>{31213685-2253-FBDB-4674-23DFB26C7631}</Project>

@@ -1301,6 +1301,7 @@ GameObject:
   - component: {fileID: 1655749430066506470}
   - component: {fileID: 1655749430066506467}
   - component: {fileID: 1655749430066506471}
+  - component: {fileID: 3613150535190066309}
   m_Layer: 10
   m_Name: spider_right
   m_TagString: Untagged
@@ -1368,7 +1369,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 1
 --- !u!65 &1655749430066506467
 BoxCollider:
@@ -1381,8 +1382,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8957398, y: 0.9675598, z: 1.2934494}
-  m_Center: {x: 0.0009404421, y: 0.62793064, z: -0.055847168}
+  m_Size: {x: 1.9166188, y: 0.9675598, z: 1.4607048}
+  m_Center: {x: 0.0028374195, y: 0.62793064, z: -0.027116776}
 --- !u!114 &1655749430066506471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1397,6 +1398,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 2
   isAttacking: 0
+--- !u!114 &3613150535190066309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8504490257798804540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83f5f6e579576104b8369a1ca2f197ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8508714662761211448
 GameObject:
   m_ObjectHideFlags: 0

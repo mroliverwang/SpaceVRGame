@@ -14,7 +14,7 @@ public class EnemyMovement : MonoBehaviour
     
 
     [SerializeField]
-    private float attackCooldown = 2f;
+    private float attackCooldown = 4f;
     [SerializeField]
     private bool isAttacking;
     private bool isClimbing;
@@ -36,23 +36,23 @@ public class EnemyMovement : MonoBehaviour
 
         if (gameObject.name.Contains("razor"))
         {
-            moveSpeed = 1.3f;
-            damage = 1f;
+            moveSpeed = 1.1f;
+            damage = 0.5f;
         }
         else if (gameObject.name.Contains("shell"))
         {
-            moveSpeed = 0.4f;
-            damage = 8f;
+            moveSpeed = 0.1f;
+            damage = 5f;
         }
         else if (gameObject.name.Contains("spike"))
         {
-            moveSpeed = 0.6f;
-            damage = 4f;
+            moveSpeed = 0.3f;
+            damage = 2f;
         }
         else if (gameObject.name.Contains("spider"))
         {
-            moveSpeed = 1f;
-            damage = 5f;
+            moveSpeed = 0.5f;
+            damage = 1f;
         }
         offset = new Vector3(0.5f, 0, 0);
     }
@@ -115,7 +115,7 @@ public class EnemyMovement : MonoBehaviour
         if (isAttacking && attackCooldown <=0 &&target!= null)
         {
             attack(target);
-            attackCooldown = 2.0f;
+            attackCooldown = 4.0f;
             //GetComponent<Animator>().SetBool("isAttacking", false);
         }
         
@@ -169,7 +169,7 @@ public class EnemyMovement : MonoBehaviour
     }
 
     private void attack(GameObject target) {
-        Debug.Log("attacking!!!!");
+        
         GetComponent<Animator>().SetBool("isAttacking", true);
         target.GetComponent<EnergyCore>().damaged(damage);
     }

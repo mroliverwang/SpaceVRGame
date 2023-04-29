@@ -10,7 +10,7 @@ public class BatFollower : MonoBehaviour
     private Vector3 velocity;
 
     [SerializeField]
-    private float _sensitivity = 100f;
+    private float _sensitivity = 96f;
     // Start is called before the first frame update
     private void Awake()
     {
