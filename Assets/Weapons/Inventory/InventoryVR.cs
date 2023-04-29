@@ -20,11 +20,24 @@ public class InventoryVR : MonoBehaviour
 
     private void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.Four))
+        // Check if the thumbstick is pulled up
+        if (OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick).y > 0.8f)
         {
-            UIActive = !UIActive;
-            Inventory.SetActive(UIActive);
+            if (!UIActive)
+            {
+                UIActive = true;
+                Inventory.SetActive(UIActive);
+            }
         }
+        else if (OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick).y < 0.2f)
+        {
+            if (UIActive)
+            {
+                UIActive = false;
+                Inventory.SetActive(UIActive);
+            }
+        }
+
         if (UIActive)
         {
             Inventory.transform.position = Anchor.transform.position;

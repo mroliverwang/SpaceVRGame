@@ -1,19 +1,21 @@
 ﻿<Properties StartupConfiguration="{C4F71CCF-0883-D375-0177-C3249BFC8331}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Oculus/Interaction/Runtime/Shaders/OculusControllerRayShader.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Oculus/SampleFramework/Core/DistanceGrab/Scripts/DistanceGrabbable.cs">
     <Files>
+      <File FileName="Assets/BallCollisionAudio.cs" Line="6" Column="2" />
       <File FileName="Assets/Oculus/Interaction/Runtime/Shaders/OculusHand.shader" Line="1" Column="1" />
       <File FileName="Assets/Oculus/VR/Scripts/Util/Slot.cs" />
       <File FileName="Assets/Oculus/VR/Scripts/Util/Item.cs" />
-      <File FileName="Assets/Weapons/Inventory/InventoryVR.cs" />
+      <File FileName="Assets/Weapons/Inventory/InventoryVR.cs" Line="11" Column="33" />
       <File FileName="Assets/Oculus/VR/Scripts/Util/OVRGrabbable.cs" />
       <File FileName="Assets/Oculus/SampleFramework/Core/DebugUI/Scripts/LaserPointer.cs" />
       <File FileName="Assets/UI/MenuController.cs" />
-      <File FileName="Assets/Oculus/Interaction/Runtime/Shaders/OculusControllerRayShader.shader" Line="1" Column="1" />
+      <File FileName="Assets/Oculus/Interaction/Runtime/Shaders/OculusControllerRayShader.shader" />
+      <File FileName="Assets/Oculus/SampleFramework/Core/DistanceGrab/Scripts/DistanceGrabbable.cs" Line="22" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b171620b-5ad6-4145-be0d-ae5c6fd35779" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f0a23925-6f0b-4048-b083-8ce8eaa8ce33" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
