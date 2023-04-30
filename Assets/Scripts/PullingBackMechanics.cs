@@ -37,10 +37,10 @@ public class PullingBackMechanics : MonoBehaviour
         newVel = new Vector3();
         curVel = new Vector3();
         pullingSpeed = 18.0f;
-        maxPull = 110f;
-        offset = new Vector3(0.1f, -0.1f, -0.9f);
+        maxPull = 125f;
+        offset = new Vector3(0.3f, -0.05f, -0.7f);
         offset2 = new Vector3(0.1f, -0.1f, 0.9f);
-        maxSpeed = 25f;
+        maxSpeed = 20f;
     }
 
     // Update is called once per frame
@@ -60,23 +60,23 @@ public class PullingBackMechanics : MonoBehaviour
             curVel = rb.velocity;
             //newVel = ((player.transform.position + offset) +  - transform.position).normalized;
             //rb.velocity = (curVel+newVel).normalized * pullingSpeed *Time.deltaTime;
-            newVel = ((player.transform.position + offset) + -transform.position);
+            newVel = ((player.transform.position + offset)  -transform.position);
             
             rb.velocity = newVel * pullingSpeed * Time.deltaTime;
         }
-        else if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) > 0.01f)
+        /*else if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) > 0.01f)
         {
 
             if (pullingSpeed < maxPull)
             {
-                pullingSpeed += 90f * Time.deltaTime;
+                pullingSpeed += 100f * Time.deltaTime;
             }
             curVel = rb.velocity;
             
             newVel = ((player.transform.position + offset2) + -transform.position);
 
             rb.velocity = newVel * pullingSpeed * Time.deltaTime;
-        }
+        }*/
         else
         {
             pullingSpeed = 18.0f;
