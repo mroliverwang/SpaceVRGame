@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.03385735, g: 0.041365176, b: 0.112459905, a: 1}
+  m_IndirectSpecularColor: {r: 0.033796158, g: 0.04028155, b: 0.11231529, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -876,7 +876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1aad63eabbca44a9a2d4a6f302f16b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: 0
+  controller: 66
   hapticDuration: 0.2
   hapticFrequency: 320
   hapticAmplitude: 0.8
@@ -14976,7 +14976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1aad63eabbca44a9a2d4a6f302f16b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: 0
+  controller: 66
   hapticDuration: 0.2
   hapticFrequency: 320
   hapticAmplitude: 0.8
@@ -15491,7 +15491,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f4a23694bb76949f78fad00be73ca9ec, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -16580,7 +16580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1aad63eabbca44a9a2d4a6f302f16b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: 0
+  controller: 66
   hapticDuration: 0.2
   hapticFrequency: 320
   hapticAmplitude: 0.8
@@ -23236,7 +23236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1aad63eabbca44a9a2d4a6f302f16b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: 0
+  controller: 66
   hapticDuration: 0.2
   hapticFrequency: 320
   hapticAmplitude: 0.8
@@ -63555,7 +63555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1aad63eabbca44a9a2d4a6f302f16b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: 0
+  controller: 66
   hapticDuration: 0.2
   hapticFrequency: 320
   hapticAmplitude: 0.8

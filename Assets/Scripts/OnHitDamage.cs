@@ -43,6 +43,14 @@ public class OnHitDamage : MonoBehaviour
             {
                 GetComponent<Animator>().SetBool("isDamaged", true);
                 health -= 1;
+
+
+                //
+
+
+
+
+
                 if (health <= 0)
                 {
                     GetComponent<Animator>().SetBool("death", true);
