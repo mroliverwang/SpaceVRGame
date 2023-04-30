@@ -12,14 +12,17 @@ public class BallCollisionAudio : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    // OnCollisionEnter is called when this collider/rigidbody starts touching another rigidbody/collider
-    void OnCollisionEnter(Collision collision)
+    
+    void OnCollisionExit(Collision collision)
     {
         PlayAudioFeedback();
     }
 
     private void PlayAudioFeedback()
     {
-        audioSource.Play();
+        if (!audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
     }
 }

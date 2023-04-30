@@ -15,6 +15,7 @@ public class PullingBackMechanics : MonoBehaviour
     private float pullingSpeed;
     private float maxPull;
     private Vector3 offset;
+    private Vector3 offset2;
     private float maxSpeed;
 
     // Start is called before the first frame update
@@ -38,8 +39,8 @@ public class PullingBackMechanics : MonoBehaviour
         pullingSpeed = 18.0f;
         maxPull = 110f;
         offset = new Vector3(0.1f, -0.1f, -0.9f);
-
-        maxSpeed = 150f;
+        offset2 = new Vector3(0.1f, -0.1f, 0.9f);
+        maxSpeed = 25f;
     }
 
     // Update is called once per frame
@@ -60,6 +61,20 @@ public class PullingBackMechanics : MonoBehaviour
             //newVel = ((player.transform.position + offset) +  - transform.position).normalized;
             //rb.velocity = (curVel+newVel).normalized * pullingSpeed *Time.deltaTime;
             newVel = ((player.transform.position + offset) + -transform.position);
+            
+            rb.velocity = newVel * pullingSpeed * Time.deltaTime;
+        }
+        else if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) > 0.01f)
+        {
+
+            if (pullingSpeed < maxPull)
+            {
+                pullingSpeed += 90f * Time.deltaTime;
+            }
+            curVel = rb.velocity;
+            
+            newVel = ((player.transform.position + offset2) + -transform.position);
+
             rb.velocity = newVel * pullingSpeed * Time.deltaTime;
         }
         else
