@@ -33,7 +33,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RampTex:
-        m_Texture: {fileID: 2800000, guid: fbe69a7740ed7894fb3eb55c04965f92, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0e392eba5ab2142fb943b2658d41fb4a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []

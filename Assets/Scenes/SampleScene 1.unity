@@ -3216,8 +3216,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 5
-      minScalar: 3
+      scalar: 4
+      minScalar: 2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3367,8 +3367,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.35
-      minScalar: 0.25
+      scalar: 0.06
+      minScalar: 0.04
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -24097,8 +24097,20 @@ PrefabInstance:
       value: ball
       objectReference: {fileID: 0}
     - target: {fileID: 192538051512949538, guid: 81a13eafe7391704daeadd07d3b01102, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 192538051512949538, guid: 81a13eafe7391704daeadd07d3b01102, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 192538051512949538, guid: 81a13eafe7391704daeadd07d3b01102, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6444088
+      objectReference: {fileID: 0}
+    - target: {fileID: 192538051512949538, guid: 81a13eafe7391704daeadd07d3b01102, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 192538051512949542, guid: 81a13eafe7391704daeadd07d3b01102, type: 3}
       propertyPath: m_RootOrder
