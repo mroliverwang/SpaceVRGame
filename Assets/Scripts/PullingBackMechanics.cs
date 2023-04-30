@@ -40,7 +40,7 @@ public class PullingBackMechanics : MonoBehaviour
         maxPull = 125f;
         offset = new Vector3(0.3f, -0.05f, -0.7f);
         offset2 = new Vector3(0.1f, -0.1f, 0.9f);
-        maxSpeed = 20f;
+        maxSpeed = 18f;
     }
 
     // Update is called once per frame
