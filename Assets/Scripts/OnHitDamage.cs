@@ -5,6 +5,7 @@ using UnityEngine;
 public class OnHitDamage : MonoBehaviour
 {
     private int health;
+    private GameObject energyCore;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class OnHitDamage : MonoBehaviour
         {
             health = 1;
         }
+        energyCore = GameObject.Find("EnergyCore");
     }
 
     // Update is called once per frame
@@ -44,6 +46,7 @@ public class OnHitDamage : MonoBehaviour
                 if (health <= 0)
                 {
                     GetComponent<Animator>().SetBool("death", true);
+                    energyCore.GetComponent<EnergyCore>().addDeath(); ;
                 }
             }
         }

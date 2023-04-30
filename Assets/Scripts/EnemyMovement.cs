@@ -37,7 +37,7 @@ public class EnemyMovement : MonoBehaviour
         if (gameObject.name.Contains("razor"))
         {
             moveSpeed = 0.8f;
-            damage = 0.5f;
+            damage = 1f;
         }
         else if (gameObject.name.Contains("shell"))
         {

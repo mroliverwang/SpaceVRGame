@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System;
 
 public class EnergyCore : MonoBehaviour
 {
@@ -11,19 +13,26 @@ public class EnergyCore : MonoBehaviour
     [SerializeField]
     private Gradient gradient;
 
+    [SerializeField]
+    private TMP_Text scoreboard;
+    [SerializeField]
+    private TMP_Text killed;
 
+    private int death;
 
     // Start is called before the first frame update
     void Start()
     {
         health = 100f;
+        death = 0;
     }
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        scoreboard.SetText(health + "" );
+        killed.SetText(death + "");
     }
 
 
@@ -34,5 +43,10 @@ public class EnergyCore : MonoBehaviour
 
 
         
+    }
+
+    public void addDeath()
+    {
+        death++;
     }
 }
