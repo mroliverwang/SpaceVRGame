@@ -11,9 +11,9 @@ public class BatFollower : MonoBehaviour
     private Vector3 velocity;
 
     [SerializeField] private OVRInput.Controller controller; // Assign the appropriate controller (LTouch or RTouch)
-    [SerializeField] private float hapticDuration = 0.6f; // Duration of the haptic feedback (in seconds)
+    [SerializeField] private float hapticDuration = 0.3f; // Duration of the haptic feedback (in seconds)
     [SerializeField] private float hapticFrequency = 320.0f; // Haptic feedback frequency (in Hz)
-    [SerializeField] private float hapticAmplitude = 0.8f; // Haptic feedback amplitude (0.0 to 1.0)
+    [SerializeField] private float hapticAmplitude = 0.5f; // Haptic feedback amplitude (0.0 to 1.0)
 
     [SerializeField]
     private float _sensitivity = 96f;
