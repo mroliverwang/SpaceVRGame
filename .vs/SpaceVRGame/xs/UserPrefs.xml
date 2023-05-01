@@ -1,17 +1,13 @@
 ﻿<Properties StartupConfiguration="{C4F71CCF-0883-D375-0177-C3249BFC8331}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/UI/ExitButtonHandler.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Oculus/SampleFramework/Core/DistanceGrab/Scripts/DistanceGrabber.cs">
     <Files>
-      <File FileName="Assets/Oculus/Interaction/Runtime/Shaders/OculusHand.shader" Line="1" Column="1" />
-      <File FileName="Assets/Oculus/VR/Scripts/Util/Slot.cs" />
+      <File FileName="Assets/Oculus/VR/Scripts/Util/Slot.cs" Line="1" Column="1" />
       <File FileName="Assets/Oculus/VR/Scripts/Util/Item.cs" />
       <File FileName="Assets/Weapons/Inventory/InventoryVR.cs" />
       <File FileName="Assets/Oculus/VR/Scripts/Util/OVRGrabbable.cs" />
-      <File FileName="Assets/Oculus/SampleFramework/Core/DebugUI/Scripts/LaserPointer.cs" />
-      <File FileName="Assets/UI/MenuController.cs" />
-      <File FileName="Assets/Oculus/Interaction/Runtime/Shaders/OculusControllerRayShader.shader" />
-      <File FileName="Assets/Oculus/SampleFramework/Core/DistanceGrab/Scripts/DistanceGrabbable.cs" />
-      <File FileName="Assets/AnimatedPlanets/Shaders/PlanetAnimatingEmissive.shader" Line="14" Column="1" />
-      <File FileName="Assets/UI/ExitButtonHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets/Oculus/SampleFramework/Core/DistanceGrab/Scripts/DistanceGrabbable.cs" Line="1" Column="1" />
+      <File FileName="Assets/Oculus/SampleFramework/Core/DistanceGrab/Scripts/GrabbableCrosshair.cs" Line="1" Column="1" />
+      <File FileName="Assets/Oculus/SampleFramework/Core/DistanceGrab/Scripts/DistanceGrabber.cs" Line="34" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

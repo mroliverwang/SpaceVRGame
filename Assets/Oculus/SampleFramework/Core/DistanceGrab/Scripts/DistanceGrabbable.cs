@@ -1,24 +1,3 @@
-/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
- *
- * Licensed under the Oculus SDK License Agreement (the "License");
- * you may not use the Oculus SDK except in compliance with the License,
- * which is provided at the time of installation or download, or which
- * otherwise accompanies this software in either electronic or hard copy form.
- *
- * You may obtain a copy of the License at
- *
- * https://developer.oculus.com/licenses/oculussdk/
- *
- * Unless required by applicable law or agreed to in writing, the Oculus SDK
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-
 using System;
 using UnityEngine;
 using OVRTouchSample;
@@ -33,7 +12,6 @@ namespace OculusSampleFramework
         GrabManager m_crosshairManager;
         Renderer m_renderer;
         MaterialPropertyBlock m_mpb;
-
 
         public bool InRange
         {
@@ -83,6 +61,20 @@ namespace OculusSampleFramework
                 else if (Targeted) m_mpb.SetColor(m_materialColorField, m_crosshairManager.OutlineColorHighlighted);
                 else m_mpb.SetColor(m_materialColorField, m_crosshairManager.OutlineColorInRange);
                 m_renderer.SetPropertyBlock(m_mpb);
+            }
+        }
+
+        public override void GrabBegin(OVRGrabber hand, Collider grabPoint)
+        {
+            base.GrabBegin(hand, grabPoint);
+
+            if (gameObject.GetComponent<Item>() == null) return;
+            if (gameObject.GetComponent<Item>().inSlot)
+            {
+                gameObject.GetComponentInParent<Slot>().ItemInSlot = null;
+                gameObject.GetComponent<Item>().inSlot = false;
+                gameObject.GetComponent<Item>().currentSlot.ResetColor();
+                gameObject.GetComponent<Item>().currentSlot = null;
             }
         }
     }
