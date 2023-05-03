@@ -5,6 +5,7 @@ using UnityEngine;
 public class OnHitDamage : MonoBehaviour
 {
     private int health;
+    private int gravityType = 0;
     private GameObject energyCore;
 
     // Start is called before the first frame update
@@ -26,6 +27,22 @@ public class OnHitDamage : MonoBehaviour
         {
             health = 1;
         }
+        else if (gameObject.name.Contains("gravity1"))
+        {
+            health = 1;
+            gravityType = 1;
+        }
+        else if (gameObject.name.Contains("gravity2"))
+        {
+            health = 1;
+            gravityType = 2;
+        }
+
+
+
+
+
+
         energyCore = GameObject.Find("EnergyCore");
     }
 
@@ -45,19 +62,37 @@ public class OnHitDamage : MonoBehaviour
                 health -= 1;
 
 
-                //
-
-
+               
 
 
 
                 if (health <= 0)
                 {
                     GetComponent<Animator>().SetBool("death", true);
-                    energyCore.GetComponent<EnergyCore>().addDeath(); ;
+                    PlayAudioFeedback();
+
+                    energyCore.GetComponent<EnergyCore>().addDeath();
+
+                    if (GetComponent<GravityChange>() != null)
+                    {
+                        GetComponent<GravityChange>().changeGravity(gravityType);
+                    }
+
+
                 }
             }
         }
     }
-    
+
+
+
+
+    private void PlayAudioFeedback()
+    {
+        if (!GetComponent<AudioSource>().isPlaying)
+        {
+            GetComponent<AudioSource>().Play();
+        }
+    }
+
 }

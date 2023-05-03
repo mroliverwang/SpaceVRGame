@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class EnergyCore : MonoBehaviour
 {
     [SerializeField]
-    private float health = 100f;
+    public static float health = 100f;
     [SerializeField]
     private GameObject lights;
     [SerializeField]
@@ -18,13 +19,18 @@ public class EnergyCore : MonoBehaviour
     [SerializeField]
     private TMP_Text killed;
 
-    private int death;
+    public static int death;
+
+    public static int enemyNearby = 0;
+
+    private float cd;
 
     // Start is called before the first frame update
     void Start()
     {
         health = 100f;
         death = 0;
+        cd = 5f;
     }
 
 
@@ -33,6 +39,22 @@ public class EnergyCore : MonoBehaviour
     {
         scoreboard.SetText(health + "" );
         killed.SetText(death + "");
+
+        cd -= Time.deltaTime;
+
+
+        if(health < 0)
+        {           
+            SceneManager.LoadScene("EndScene");
+        }
+
+        if(enemyNearby == 1 && cd < 0)
+        {
+            PlayAudioFeedback();
+            cd = 5f;
+        }
+
+
     }
 
 
@@ -48,5 +70,14 @@ public class EnergyCore : MonoBehaviour
     public void addDeath()
     {
         death++;
+    }
+
+
+    private void PlayAudioFeedback()
+    {
+        if (!GetComponent<AudioSource>().isPlaying)
+        {
+            GetComponent<AudioSource>().Play();
+        }
     }
 }

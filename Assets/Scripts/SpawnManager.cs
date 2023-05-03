@@ -9,6 +9,7 @@ public class SpawnManager : MonoBehaviour
 
     public GameObject[] enemyList;
     public GameObject[] difficultEnemyList;
+    public GameObject[] specialEnemyList;
     
     private InputDevice targetDevice;
 
@@ -69,6 +70,7 @@ public class SpawnManager : MonoBehaviour
             offset = new Vector3(0f, Random.Range(-0.5f, 0.5f), 0);
             Instantiate(enemyList[index], enemyList[index].transform.position + offset, enemyList[index].transform.rotation);
             cooldown = Random.Range(16,21);
+            PlayAudioFeedback();
         }
 
         if (cooldown <= 0 && stageCountDown <= 0)
@@ -77,11 +79,23 @@ public class SpawnManager : MonoBehaviour
             offset = new Vector3(0f, Random.Range(-0.5f, 0.5f), 0);
             Instantiate(difficultEnemyList[index], difficultEnemyList[index].transform.position + offset, difficultEnemyList[index].transform.rotation);
             cooldown = Random.Range(16, 18);
+
+            PlayAudioFeedback();
         }
 
         if (stageCountDown > 0)
         {
             stageCountDown -= Time.deltaTime;
+        }
+    }
+
+
+
+    private void PlayAudioFeedback()
+    {
+        if (!GetComponent<AudioSource>().isPlaying)
+        {
+            GetComponent<AudioSource>().Play();
         }
     }
 }

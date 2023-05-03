@@ -6,8 +6,7 @@ public class EnemyMovement : MonoBehaviour
 {
   
     private Vector3 currentForward;
-    private float gravity = 10f;
-    private float lerpSpeed = 10f;
+    
     
     private GameObject target;
     private float damage = 5f;
@@ -54,6 +53,11 @@ public class EnemyMovement : MonoBehaviour
             moveSpeed = 0.3f;
             damage = 1f;
         }
+        else if (gameObject.name.Contains("gravity"))
+        {
+            moveSpeed = 0.15f;
+            damage = 0f;
+        }
         offset = new Vector3(0.5f, 0, 0);
     }
 
@@ -82,7 +86,11 @@ public class EnemyMovement : MonoBehaviour
             {
                 transform.Translate(currentForward *moveSpeed * Time.deltaTime);
             }
-            
+            else if (gameObject.name.Contains("gravity"))
+            {
+                transform.Translate(currentForward * moveSpeed * Time.deltaTime);
+            }
+
         }
 
 
@@ -97,6 +105,7 @@ public class EnemyMovement : MonoBehaviour
             {
                 if (hit.transform.tag == "SideWall") { 
                     isClimbing = true;
+                    EnergyCore.enemyNearby = 1;
                     if (gameObject.name.Contains("right"))
                     {
                         transform.up = hit.normal;
