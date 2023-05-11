@@ -43,12 +43,16 @@ public class BatFollower : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //if (LayerMask.LayerToName(collision.gameObject.layer) == "ball") 
-        //{
+        if (LayerMask.LayerToName(collision.gameObject.layer) == "ball") 
+        {
 
             OVRInput.SetControllerVibration(hapticFrequency, hapticAmplitude, controller);
             StartCoroutine(StopVibrationAfterDelay(hapticDuration));
-        //}
+
+            collision.gameObject.GetComponent<MagneticBall>().hit = 1;
+
+
+        }
     }
 
     private IEnumerator StopVibrationAfterDelay(float delay)

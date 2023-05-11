@@ -16,7 +16,7 @@ public class PullingBackMechanics : MonoBehaviour
     private float maxPull;
     private Vector3 offset;
     private Vector3 offset2;
-    private float maxSpeed;
+    public float maxSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -38,9 +38,9 @@ public class PullingBackMechanics : MonoBehaviour
         curVel = new Vector3();
         pullingSpeed = 18.0f;
         maxPull = 125f;
-        offset = new Vector3(0.3f, -0.05f, -0.7f);
+        offset = new Vector3(0.3f, 0.05f, -0.7f);
         offset2 = new Vector3(0.1f, -0.1f, 0.9f);
-        maxSpeed = 18f;
+        maxSpeed = 16f;
     }
 
     // Update is called once per frame
@@ -52,6 +52,9 @@ public class PullingBackMechanics : MonoBehaviour
         
         if (triggervalue > 0.1f || OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger)>0.01f)
         {
+
+            GetComponent<MagneticBall>().hit = 0;
+
             
             if (pullingSpeed < maxPull)
             {

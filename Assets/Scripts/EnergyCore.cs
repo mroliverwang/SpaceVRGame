@@ -18,6 +18,8 @@ public class EnergyCore : MonoBehaviour
     private TMP_Text scoreboard;
     [SerializeField]
     private TMP_Text killed;
+    [SerializeField]
+    private TMP_Text totalenemy;
 
     public static int death;
 
@@ -25,12 +27,18 @@ public class EnergyCore : MonoBehaviour
 
     private float cd;
 
+    public static float gameTime = 0;
+
+
     // Start is called before the first frame update
     void Start()
     {
         health = 100f;
         death = 0;
         cd = 5f;
+        enemyNearby = 0;
+        gameTime = 0;
+        
     }
 
 
@@ -39,6 +47,7 @@ public class EnergyCore : MonoBehaviour
     {
         scoreboard.SetText(health + "" );
         killed.SetText(death + "");
+        totalenemy.SetText(SpawnManager.totalEnemy + "");
 
         cd -= Time.deltaTime;
 
@@ -48,13 +57,20 @@ public class EnergyCore : MonoBehaviour
             SceneManager.LoadScene("EndScene");
         }
 
-        if(enemyNearby == 1 && cd < 0)
+        if (death == 60)
+        {
+            SceneManager.LoadScene("WinScene");
+        }
+
+
+
+        if (enemyNearby == 1 && cd < 0)
         {
             PlayAudioFeedback();
             cd = 5f;
         }
 
-
+        gameTime += Time.deltaTime;
     }
 
 

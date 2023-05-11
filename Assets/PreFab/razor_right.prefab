@@ -1085,8 +1085,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2338208, y: 1.0064856, z: 1.4155246}
-  m_Center: {x: 0.011385482, y: 0.6028757, z: 0.0027137275}
+  m_Size: {x: 0.9225127, y: 0.67755747, z: 0.91080546}
+  m_Center: {x: -0.004687996, y: 0.4384117, z: 0.0006183531}
 --- !u!114 &4501319577257591009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1113,6 +1113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83f5f6e579576104b8369a1ca2f197ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
 --- !u!82 &4501319576150749783
 AudioSource:
   m_ObjectHideFlags: 0

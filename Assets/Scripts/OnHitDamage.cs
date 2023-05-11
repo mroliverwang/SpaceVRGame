@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OnHitDamage : MonoBehaviour
 {
+    [SerializeField]
     private int health;
     private int gravityType = 0;
     private GameObject energyCore;
@@ -17,7 +18,7 @@ public class OnHitDamage : MonoBehaviour
         }
         else if (gameObject.name.Contains("shell"))
         {
-            health = 3;
+            health = 2;
         }
         else if (gameObject.name.Contains("spike"))
         {
@@ -56,13 +57,16 @@ public class OnHitDamage : MonoBehaviour
     {
         if (LayerMask.LayerToName(other.gameObject.layer) == "ball")
         {
+
+            other.gameObject.GetComponent<MagneticBall>().hit = 0;
+
             if (health > 0)
             {
                 GetComponent<Animator>().SetBool("isDamaged", true);
                 health -= 1;
 
 
-               
+                GetComponentInChildren<Light>().color = Color.yellow;
 
 
 

@@ -5,6 +5,8 @@ using UnityEngine.XR;
 
 public class SpawnManager : MonoBehaviour
 {
+    public static int totalEnemy = 40;
+
     public GameObject ball;
 
     public GameObject[] enemyList;
@@ -13,7 +15,8 @@ public class SpawnManager : MonoBehaviour
     
     private InputDevice targetDevice;
 
-
+    private bool b1 = false;
+    private bool b2 = false;
 
     [SerializeField]
     private float cooldown;
@@ -38,9 +41,9 @@ public class SpawnManager : MonoBehaviour
 
         cooldown = 7f;
 
-        stageCountDown = 200f;
+        stageCountDown = 80f;
         index = 0;
-        
+        totalEnemy = 40;
     }
 
     // Update is called once per frame
@@ -62,25 +65,49 @@ public class SpawnManager : MonoBehaviour
         cooldown -=   Time.deltaTime;
         stageCountDown -= Time.deltaTime;
 
-
-        if(cooldown <= 0 && stageCountDown > 0)
+        if (totalEnemy > 0)
         {
-            index = Random.Range(0, enemyList.Length);
+            if (cooldown <= 0 && stageCountDown > 0)
+            {
+                index = Random.Range(0, enemyList.Length);
 
-            offset = new Vector3(0f, Random.Range(-0.5f, 0.5f), 0);
-            Instantiate(enemyList[index], enemyList[index].transform.position + offset, enemyList[index].transform.rotation);
-            cooldown = Random.Range(16,21);
-            PlayAudioFeedback();
-        }
+                offset = new Vector3(0f, Random.Range(-0.5f, 0.5f), 0);
+                Instantiate(enemyList[index], enemyList[index].transform.position + offset, enemyList[index].transform.rotation);
+                cooldown = Random.Range(6, 8);
+                PlayAudioFeedback();
+                totalEnemy--;
+            }
 
-        if (cooldown <= 0 && stageCountDown <= 0)
-        {
-            index = Random.Range(0, difficultEnemyList.Length);
-            offset = new Vector3(0f, Random.Range(-0.5f, 0.5f), 0);
-            Instantiate(difficultEnemyList[index], difficultEnemyList[index].transform.position + offset, difficultEnemyList[index].transform.rotation);
-            cooldown = Random.Range(16, 18);
+            if (cooldown <= 0 && stageCountDown <= 0)
+            {
+                index = Random.Range(0, difficultEnemyList.Length);
+                offset = new Vector3(0f, Random.Range(-0.5f, 0.5f), 0);
+                Instantiate(difficultEnemyList[index], difficultEnemyList[index].transform.position + offset, difficultEnemyList[index].transform.rotation);
+                cooldown = Random.Range(5, 7);
 
-            PlayAudioFeedback();
+                if (!b1 && totalEnemy == 10)
+                {
+                    Instantiate(specialEnemyList[0], specialEnemyList[0].transform.position + offset, specialEnemyList[0].transform.rotation);
+                    b1 = true;
+                }
+
+                PlayAudioFeedback();
+                totalEnemy--;
+            }
+
+            if (totalEnemy == 2)
+            {
+
+                offset = new Vector3(0f, Random.Range(-0.5f, 0.5f), 0);
+
+                if (!b2)
+                {
+                    Instantiate(specialEnemyList[1], specialEnemyList[1].transform.position + offset, specialEnemyList[1].transform.rotation);
+                    b2 = true;
+                }
+                PlayAudioFeedback();
+                totalEnemy--;
+            }
         }
 
         if (stageCountDown > 0)

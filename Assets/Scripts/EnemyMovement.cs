@@ -35,7 +35,7 @@ public class EnemyMovement : MonoBehaviour
 
         if (gameObject.name.Contains("razor"))
         {
-            moveSpeed = 0.8f;
+            moveSpeed = 1f;
             damage = 1f;
         }
         else if (gameObject.name.Contains("shell"))
@@ -45,12 +45,12 @@ public class EnemyMovement : MonoBehaviour
         }
         else if (gameObject.name.Contains("spike"))
         {
-            moveSpeed = 0.15f;
+            moveSpeed = 0.2f;
             damage = 2f;
         }
         else if (gameObject.name.Contains("spider"))
         {
-            moveSpeed = 0.3f;
+            moveSpeed = 0.5f;
             damage = 1f;
         }
         else if (gameObject.name.Contains("gravity"))
