@@ -57,7 +57,7 @@ public class EnergyCore : MonoBehaviour
             SceneManager.LoadScene("EndScene");
         }
 
-        if (death == 60)
+        if (death == 41)
         {
             SceneManager.LoadScene("WinScene");
         }

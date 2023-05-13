@@ -41,6 +41,7 @@ public class GravityChange : MonoBehaviour
         if(index == 1)
         {
             ball.GetComponent<Rigidbody>().useGravity = true;
+            ball.GetComponent<Rigidbody>().mass = 1.5f;
         }
         else if (index == 2)
         {

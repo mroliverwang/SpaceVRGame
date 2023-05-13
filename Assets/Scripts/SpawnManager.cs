@@ -85,7 +85,7 @@ public class SpawnManager : MonoBehaviour
                 Instantiate(difficultEnemyList[index], difficultEnemyList[index].transform.position + offset, difficultEnemyList[index].transform.rotation);
                 cooldown = Random.Range(5, 7);
 
-                if (!b1 && totalEnemy == 10)
+                if (!b1 && totalEnemy == 11)
                 {
                     Instantiate(specialEnemyList[0], specialEnemyList[0].transform.position + offset, specialEnemyList[0].transform.rotation);
                     b1 = true;
